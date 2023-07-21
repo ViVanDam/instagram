@@ -1,0 +1,44 @@
+.home-wrapper {
+    width: 100%;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .content-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 700px;
+
+        .left {
+            width: 382.32px;
+            margin-right: 32px;
+            height: 581.15px;
+            background-size: 468.32px 634.15px;
+            background-position: -46px 0;
+            align-self: center;
+            background-image: url('../../assets/authPage/home-phones.png');
+            position: relative;
+
+            .screen-mobile {
+                position: absolute;
+                bottom: 7px;
+                right: 18px;
+
+                img {
+                    transition: all linear 0.5s;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    &.hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

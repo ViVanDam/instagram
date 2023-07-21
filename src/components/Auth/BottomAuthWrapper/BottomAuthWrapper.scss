@@ -1,0 +1,27 @@
+.auth-bottom  {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        margin: 12px 0 0px;
+    }
+
+    .app-stores {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        
+        img {
+            height: 40px;
+        }
+
+        img+img {
+            margin-left: 10px;
+        }
+        
+    }
+}

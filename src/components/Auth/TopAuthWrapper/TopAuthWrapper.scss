@@ -1,0 +1,140 @@
+
+:root {
+    --text-blue : #4cb5f9;
+    --border : #dbdbdb;
+    --text-secondary-color: #737373;
+    --slogan-text-color : #777773;
+    --text-a-color : #00376b;
+}
+
+.auth-top {
+    width: 350px;
+    padding: 40px 10px 20px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+
+    .slogan {
+        color: var(--slogan-text-color);
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 10px 40px 10px;
+        text-align: center;
+        width: 268px;
+    }
+
+    .wfb-wrapper.signin-wfb {
+        margin-top: 0;
+
+        .logo-fb {
+            background-position: -414px -300px;
+        }
+
+        .wfb {
+            color: #fff;
+        }
+    }
+
+    form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png);
+    background-position: 0px 0px;
+    background-size: 176px 186px;
+    width: 174px;
+    height: 50px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    }
+
+    .or-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 350px;
+        color: var(--text-secondary-color);
+        padding: 0 44px;
+
+        div:first-child,
+        div:last-child {
+            border: none;
+            flex: 1;
+            background-color: var(--border);
+            height: 1.5px;
+        }
+
+        .or-text {
+            margin: 0 15px;
+            font-weight: 600;
+        }
+    }
+
+    .logo-fb {
+        border: 0;
+        display: inline-block;
+        font: inherit;
+        font-size: 100%;
+        margin: 0;
+        margin-right: 8px;
+        padding: 0;
+        position: relative;
+        top: 3px;
+        vertical-align: baseline;
+        background-repeat: no-repeat;
+        background-position: -414px -259px;
+        height: 16px;
+        width: 16px;
+        background-image: url('../../../assets/authPage/all-icon.png');
+    }
+
+    .uploaded-text {
+        width: 268px;
+        font-size: 12px;
+        color: var(--text-secondary-color);
+        text-align: center;
+        margin: 20px 0 0;
+
+        span {
+            color: var(--text-a-color);
+        }
+    }
+
+    .agree {
+        width: 268px;
+        font-size: 12px;
+        color: var(--text-secondary-color);
+        text-align: center;
+        margin: 20px 0 0;
+
+        span {
+            color: var(--text-a-color);
+        }
+    }
+
+    .wfb-wrapper {
+        color: rgb(56,81,133);
+        font-size: 14px;
+        margin: 20px 0 0;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .fogot-wrapper {
+        font-size: 12px;
+        margin: 10px 0;
+        // font-weight: 300;
+        cursor: pointer;
+    }
+
+}

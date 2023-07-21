@@ -1,0 +1,23 @@
+:root {
+    --text-blue : #4cb5f9;
+    --border : #dbdbdb;
+}
+
+.auth-mid {
+    width: 350px;
+    padding: 20px 0;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border);
+
+    .text {
+        margin-right: 10px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--text-blue);
+        font-weight: 600;
+    }
+}
