@@ -1,0 +1,109 @@
+$border-color: #dbdbdb;
+$black-color: #000;
+$white-color: #fff;
+$sec-text-color: #737373;
+$footer-color: #c7c7c7;
+$blue-text-color: #0995f6;
+
+.home2-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .main-menu {
+        min-width: 245px;
+        height: 100vh;
+    }
+
+    .content-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 100px;
+
+        .center-content {
+            width: 66.6666%;
+            min-height: 100vh;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .post-list {
+                width: 95%;
+                padding: 0 46px;
+                margin-top: 20px;
+                display: flex;
+             // justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .right-content {
+            width: 33.3333%;
+            margin-top: 30px;
+            padding-top: 16px;
+
+            .your-account {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 56px;
+                margin-bottom: 16px;
+
+                .account-name {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: $black-color;
+                }
+
+                .sound-and-location {
+                    color: $sec-text-color;
+                    cursor: pointer;
+                }
+
+                .switch-account {
+                    color: $blue-text-color;
+                    cursor: pointer;
+                }
+            }
+
+            .suggest-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 4px 16px;
+
+                .suggest-title {
+                    font-weight: 500;
+                }
+
+                .see-all {
+                    color: $black-color;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .right-footer {
+                padding: 4px 16px;
+                color: $footer-color;
+                
+                .top .link{
+                    color: $footer-color;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

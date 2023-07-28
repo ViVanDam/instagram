@@ -10,13 +10,14 @@ import mobileScreen2 from "../../assets/authPage/screenshot2.png";
 import mobileScreen3 from "../../assets/authPage/screenshot3.png";
 import mobileScreen4 from "../../assets/authPage/screenshot4.png";
 
-const mobileScreens = [
+const mobileScreenss = [
   mobileScreen1,
   mobileScreen2,
   mobileScreen3,
   mobileScreen4,
 ];
 function Home() {
+  const mobileScreens = mobileScreenss;
   // const [activeIndex, setActiveIndex] = useState(0);
 
   // const handleImageClick = (index) => {

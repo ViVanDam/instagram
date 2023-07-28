@@ -1,0 +1,43 @@
+.user-info-item {
+    width: 66px;
+    height: 84px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    .avt-wrapper {
+        width: 66px;
+        height: 66px;
+        border: 4px solid;
+        border-top: #ff8a00;
+        border-right: #F3425F;
+        border-bottom: #e41e3f;
+        border-left: #FF66BF;
+        border-radius: 50%;
+        // border-image: linear-gradient(to right, #ff8a00,#F3425F, #e52e71,#e41e3f,#FF66BF) 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 3px solid #000;
+            cursor: pointer;
+            // border-image: linear-gradient(to right, #ff8a00,#F3425F, #e52e71,#e41e3f,#FF66BF) 4 round;
+        }
+    }
+
+    .account-name {
+        font-size: 1.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 66px;
+        cursor: pointer;
+    }
+}
+
