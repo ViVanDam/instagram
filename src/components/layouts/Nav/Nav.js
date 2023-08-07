@@ -27,7 +27,7 @@ const itemList = [
     icon: HomeIconWhite,
     iconActive: HomeIconBlackActive,
     title: "Trang chủ",
-    to: "/home",
+    to: "/",
   },
   {
     icon: SearchIconBlack,
@@ -39,13 +39,13 @@ const itemList = [
     icon: ExploreIconBlack,
     iconActive: ExploreIconBlackActive,
     title: "Khám phá",
-    to: "/login",
+    to: "/explore",
   },
   {
     icon: ReelsIconBlack,
     iconActive: ReelsIconBlackActive,
     title: "Reels",
-    to: "/signin",
+    to: "/reels",
   },
   {
     icon: MessageIconBlack,
@@ -65,7 +65,7 @@ const itemList = [
     title: "Tạo",
     to: "#",
   },
-  { icon: {}, title: "Trang cá nhân", to: "/home", avt: avt },
+  { icon: {}, title: "Trang cá nhân", to: "/adam_gfb", avt: avt },
 ];
 
 function Nav() {

@@ -9,6 +9,7 @@ import pi1 from "../../../assets/post/post-img-1.jpg";
 import pi21 from "../../../assets/post/pi21.jpg";
 import pi22 from "../../../assets/post/pi22.jpg";
 import pi23 from "../../../assets/post/pi23.jpg";
+import { useState } from "react";
 
 const storyList = [
   { logo: avt, username: "adam_gfb" },
@@ -27,6 +28,7 @@ const postList = [
   {
     id: 1,
     avt: avt,
+    extraInfo: "Mới tham gia Instagram",
     username: "adam_gfb",
     fullName: "Võ Chúc Duyên",
     time: "2 ngày",
@@ -44,6 +46,7 @@ const postList = [
   {
     id: 2,
     avt: avt,
+    extraInfo: "Có adam_gfb theo dõi",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -61,6 +64,7 @@ const postList = [
   {
     id: 3,
     avt: avt,
+    extraInfo: "Có adam_gfb theo dõi",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -78,6 +82,7 @@ const postList = [
   {
     id: 4,
     avt: avt,
+    extraInfo: "Mới tham gia Instagram",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -95,6 +100,7 @@ const postList = [
   {
     id: 5,
     avt: avt,
+    extraInfo: "Có adam_gfb theo dõi",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -112,6 +118,7 @@ const postList = [
   {
     id: 6,
     avt: avt,
+    extraInfo: "Mới tham gia Instagram",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -129,6 +136,7 @@ const postList = [
   {
     id: 7,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -147,6 +155,7 @@ const postList = [
   {
     id: 8,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -164,6 +173,7 @@ const postList = [
   {
     id: 9,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -181,6 +191,7 @@ const postList = [
   {
     id: 10,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -198,6 +209,7 @@ const postList = [
   {
     id: 11,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -215,6 +227,7 @@ const postList = [
   {
     id: 12,
     avt: avt,
+    extraInfo: "",
     username: "adam_gfb",
     fullName: "Nguyễn Hoàng Bảo Bảo",
     time: "2 ngày",
@@ -231,9 +244,38 @@ const postList = [
   },
 ];
 
+const suggestAccountsFake = postList.filter((object) => object.extraInfo);
+suggestAccountsFake.map((item) => {
+  item.following = false;
+  item.private = false;
+  return item;
+});
+
+const suggestAccountList = suggestAccountsFake.filter((object, index) => {
+  if (index % 2 !== 0) {
+    object.private = true;
+  }
+  return object;
+});
+
 function Home2() {
   const posts = postList;
   const stories = storyList;
+
+  const [suggestAccounts, setSuggestAccounts] = useState(suggestAccountList);
+
+  const handleClick = (item) => {
+    const newList = suggestAccounts.map((it) => {
+      if (it === item) {
+        it.following = !it.following;
+      }
+      return it;
+    });
+
+    // Update the suggestAccountList with the new state.
+    setSuggestAccounts(newList);
+  };
+
   return (
     <div className="home2-wrapper">
       <div className="main-menu">
@@ -262,6 +304,36 @@ function Home2() {
             <span className="suggest-title">Gợi ý cho bạn</span>
             <span className="see-all">Xem tất cả</span>
           </div>
+          {suggestAccountList.map((item) => {
+            return (
+              <div key={item.id} className="suggest-account">
+                <div className="suggest-account-info">
+                  <UserInfoBasic
+                    avt={item.avt}
+                    username={item.username}
+                    extraInfo={item.extraInfo}
+                    direction="horiz"
+                    size="32"
+                  />
+                </div>
+                {item.following !== true ? (
+                  <span
+                    className="follow-btn"
+                    onClick={() => handleClick(item)}
+                  >
+                    Theo dõi
+                  </span>
+                ) : (
+                  <span
+                    className="follow-btn followed"
+                    onClick={() => handleClick(item)}
+                  >
+                    {item.private === true ? "Đã yêu cầu" : "Đang theo dõi"}
+                  </span>
+                )}
+              </div>
+            );
+          })}
           <div className="right-footer">
             <Footer left={true} />
           </div>

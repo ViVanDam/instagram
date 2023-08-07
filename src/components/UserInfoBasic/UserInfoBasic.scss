@@ -32,12 +32,66 @@
         }
     }
 
-    .account-name {
-        font-size: 1.2rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 66px;
-        cursor: pointer;
+    .text-content {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: column;
+
+        .name-wrapper {
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            flex-direction: column;
+        }
+        
+        .username-and-time {
+            font-size: 1.2rem;
+            // color: #262626;
+            // font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 66px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .username {
+                color: #000;
+            }
+
+            .blue-tick {
+                margin-left: 6px;
+            }
+            .time {
+                margin-left: 6px;
+            }
+
+            .following {
+                margin-left: 6px;
+                font-weight: 500;
+            }
+        }
+
+        .extra-info-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .location-and-sound {
+                display: flex;
+
+                .location + .bullet {
+                    margin-left: 6px;
+                }
+
+                .bullet + .sound {
+                    margin-left: 6px;
+                }
+            }
+        }
+        
     }
+
 }
 

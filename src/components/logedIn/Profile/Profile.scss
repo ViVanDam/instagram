@@ -1,0 +1,26 @@
+
+
+.profile-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .main-menu {
+        min-width: 245px;
+        height: 100vh;
+    }
+
+    .content-wrapper {
+        // flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 100px;
+        flex-direction: column;
+        padding-bottom: 10px;
+
+    }
+
+}

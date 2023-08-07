@@ -1,0 +1,63 @@
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover .interact-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-wrapper {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .interact-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+
+        .like,.comments {
+            margin-right: 6px;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .like {
+            margin-right: 20px;
+        }
+
+        .like-icon {
+            display: block;
+            background-repeat: no-repeat;
+            background-position: -340px -333px;
+            height: 19px;
+            width: 19px;
+            background-image: url(../../assets//authPage/all-icon.png);
+        }
+
+        .comment-icon {
+            display: block;
+            background-repeat: no-repeat;
+            background-position: -382px -333px;
+            height: 19px;
+            width: 19px;
+            background-image: url(../../assets//authPage/all-icon.png);
+        }
+    }
+}

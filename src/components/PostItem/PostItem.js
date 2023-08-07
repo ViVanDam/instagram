@@ -21,6 +21,7 @@ function PostItem(post) {
   const addProps = {
     direction: "horiz",
     size: "32",
+    post: true,
     ...props,
   };
 

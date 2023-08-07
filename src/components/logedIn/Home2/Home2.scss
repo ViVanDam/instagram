@@ -39,6 +39,10 @@ $blue-text-color: #0995f6;
              // justify-content: center;
                 align-items: center;
                 flex-direction: column;
+
+                // .extra-info {
+                //     display: none;
+                // }
             }
         }
 
@@ -55,19 +59,22 @@ $blue-text-color: #0995f6;
                 height: 56px;
                 margin-bottom: 16px;
 
-                .account-name {
+                .username {
                     font-size: 1.4rem;
                     font-weight: 500;
                     color: $black-color;
                 }
 
-                .sound-and-location {
+                .extra-info-wrapper {
                     color: $sec-text-color;
                     cursor: pointer;
                 }
 
                 .switch-account {
                     color: $blue-text-color;
+                    font-weight: 500;
+                    font-size: 12px;
+                    margin-right: 16px;
                     cursor: pointer;
                 }
             }
@@ -88,6 +95,28 @@ $blue-text-color: #0995f6;
 
                     &:hover {
                         opacity: 0.5;
+                    }
+                }
+            }
+
+            .suggest-account {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 4px 16px;
+
+                .follow-btn {
+                    color: $blue-text-color;
+                    font-size: 12px;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &.followed {
+                        color: #737373;
+                    }
+
+                    &:hover {
+                        color: #1f4f7d;
                     }
                 }
             }

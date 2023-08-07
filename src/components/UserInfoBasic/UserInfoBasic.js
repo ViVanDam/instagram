@@ -6,11 +6,14 @@ function UserInfoBasic({
   username,
   fullname = "",
   location = "",
-  blueTick = false,
+  blueTick = null,
+  following = null,
   time = null,
   direction = "verti",
   size = "56",
   sound = "",
+  extraInfo = "",
+  post = false,
 }) {
   const flexDirection = direction === "verti" ? "column" : "row";
   const justifyContent = direction === "verti" ? "center" : "flex-start";
@@ -21,6 +24,11 @@ function UserInfoBasic({
   const wrapperWidth = size === "32" ? 40 + "px" : 66 + "px";
   const wrapperHeight = size === "32" ? 40 + "px" : 66 + "px";
   const accountWidth = direction === "horiz" ? "fit-content" : 66 + "px";
+  const fontSize = direction === "horiz" && 14 + "px";
+  const fontWeight = direction === "horiz" && 500;
+  const color = direction === "horiz" && "#000";
+  const marginLeft = direction === "horiz" && 6 + "px";
+
   return (
     <div
       className="user-info-item"
@@ -42,25 +50,61 @@ function UserInfoBasic({
           style={{ width: imgWidth, height: imgHeight }}
         />
       </div>
-      <div className="text-content">
-        <div className="account-name" style={{ width: accountWidth }}>
-          {username}{" "}
-          {blueTick && (
-            <span className="blue-tick">
-              <BlueTickIcon />
-            </span>
-          )}
-          {time && <span className="time"> &bull; {" " + time}</span>}
-        </div>
-
-        <div className="sound-and-location">
-          {location && location !== "" && (
-            <div className="location">{location}</div>
-          )}
-          {sound && sound !== "" && <div className="sound"> {" " + sound}</div>}
-
+      <div
+        className="text-content"
+        style={{
+          marginLeft: marginLeft,
+        }}
+      >
+        <div className="name-wrapper">
+          <div
+            className="username-and-time"
+            style={{
+              width: accountWidth,
+            }}
+          >
+            <p
+              className="username"
+              style={{
+                fontSize: fontSize,
+                fontWeight: fontWeight,
+                color: color,
+              }}
+            >
+              {username}
+            </p>{" "}
+            {blueTick && (
+              <span className="blue-tick">
+                <BlueTickIcon />
+              </span>
+            )}
+            {time && <span className="time"> &bull; {" " + time}</span>}
+            {following !== null && (
+              <span className="following">
+                {" "}
+                &bull; {following !== true ? " Theo dõi" : "Đang theo dõi"}
+              </span>
+            )}
+          </div>
           {fullname && fullname !== "" && (
             <div className="fullname">{fullname}</div>
+          )}
+        </div>
+
+        <div className="extra-info-wrapper">
+          <div className="location-and-sound">
+            {location && location !== "" && (
+              <div className="location">{location}</div>
+            )}
+
+            {location && sound && <span className="bullet"> &bull; </span>}
+
+            {sound && sound !== "" && (
+              <div className="sound"> {" " + sound}</div>
+            )}
+          </div>
+          {extraInfo && post === false && extraInfo !== "" && (
+            <div className="extra-info"> {extraInfo}</div>
           )}
         </div>
       </div>
