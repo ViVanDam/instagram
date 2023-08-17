@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 import "./Explore.scss";
-import Nav from "../../layouts/Nav";
 import GalleryPage from "../../GalleryPage/GalleryPage";
 import Footer from "../../Footer/Footer";
 import exR1 from "../../../assets/explorePage/ex-r-1.jpg";
@@ -212,25 +211,20 @@ function Explore() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [showGallery]);
+  });
   return (
-    <div className="explore-wrapper">
-      <div className="main-menu">
-        <Nav />
+    <div className="content-wrapper">
+      <div className="gallery">
+        {showGallery.map((item, index) => {
+          return <GalleryPage key={index} data={item} />;
+        })}
       </div>
-      <div className="content-wrapper">
-        <div className="gallery">
-          {showGallery.map((item, index) => {
-            return <GalleryPage key={index} data={item} />;
-          })}
+      {loading && (
+        <div className="loading">
+          <img src={loadIcon} alt="loading-icon" />
         </div>
-        {loading && (
-          <div className="loading">
-            <img src={loadIcon} alt="loading-icon" />
-          </div>
-        )}
-        <Footer />
-      </div>
+      )}
+      <Footer />
     </div>
   );
 }

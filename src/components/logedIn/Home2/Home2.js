@@ -1,5 +1,4 @@
 import "./Home2.scss";
-import Nav from "../../layouts/Nav";
 import HomeStoriesList from "../../HomeStoriesList/HomeStoriesList";
 import UserInfoBasic from "../../UserInfoBasic/UserInfoBasic";
 import PostItem from "../../PostItem/PostItem";
@@ -277,66 +276,58 @@ function Home2() {
   };
 
   return (
-    <div className="home2-wrapper">
-      <div className="main-menu">
-        <Nav />
-      </div>
-      <div className="content-wrapper">
-        <div className="center-content">
-          <HomeStoriesList storyList={stories} />
-          <div className="post-list">
-            {posts.map((post) => {
-              return <PostItem key={post.id} post={post} />;
-            })}
-          </div>
-        </div>
-        <div className="right-content">
-          <div className="your-account">
-            <UserInfoBasic
-              avt={avt}
-              username={"adam_gfb"}
-              fullname="Vi Văn Đảm"
-              direction="horiz"
-            />
-            <span className="switch-account">Chuyển</span>
-          </div>
-          <div className="suggest-header">
-            <span className="suggest-title">Gợi ý cho bạn</span>
-            <span className="see-all">Xem tất cả</span>
-          </div>
-          {suggestAccountList.map((item) => {
-            return (
-              <div key={item.id} className="suggest-account">
-                <div className="suggest-account-info">
-                  <UserInfoBasic
-                    avt={item.avt}
-                    username={item.username}
-                    extraInfo={item.extraInfo}
-                    direction="horiz"
-                    size="32"
-                  />
-                </div>
-                {item.following !== true ? (
-                  <span
-                    className="follow-btn"
-                    onClick={() => handleClick(item)}
-                  >
-                    Theo dõi
-                  </span>
-                ) : (
-                  <span
-                    className="follow-btn followed"
-                    onClick={() => handleClick(item)}
-                  >
-                    {item.private === true ? "Đã yêu cầu" : "Đang theo dõi"}
-                  </span>
-                )}
-              </div>
-            );
+    <div className="content-wrapper">
+      <div className="center-content">
+        <HomeStoriesList storyList={stories} />
+        <div className="post-list">
+          {posts.map((post) => {
+            return <PostItem key={post.id} post={post} />;
           })}
-          <div className="right-footer">
-            <Footer left={true} />
-          </div>
+        </div>
+      </div>
+      <div className="right-content">
+        <div className="your-account">
+          <UserInfoBasic
+            avt={avt}
+            username={"adam_gfb"}
+            fullname="Vi Văn Đảm"
+            direction="horiz"
+          />
+          <span className="switch-account">Chuyển</span>
+        </div>
+        <div className="suggest-header">
+          <span className="suggest-title">Gợi ý cho bạn</span>
+          <span className="see-all">Xem tất cả</span>
+        </div>
+        {suggestAccountList.map((item) => {
+          return (
+            <div key={item.id} className="suggest-account">
+              <div className="suggest-account-info">
+                <UserInfoBasic
+                  avt={item.avt}
+                  username={item.username}
+                  extraInfo={item.extraInfo}
+                  direction="horiz"
+                  size="32"
+                />
+              </div>
+              {item.following !== true ? (
+                <span className="follow-btn" onClick={() => handleClick(item)}>
+                  Theo dõi
+                </span>
+              ) : (
+                <span
+                  className="follow-btn followed"
+                  onClick={() => handleClick(item)}
+                >
+                  {item.private === true ? "Đã yêu cầu" : "Đang theo dõi"}
+                </span>
+              )}
+            </div>
+          );
+        })}
+        <div className="right-footer">
+          <Footer left={true} />
         </div>
       </div>
     </div>

@@ -19,8 +19,10 @@ import {
   CreateIconBlackActive,
   MenuBtnBlack,
   MenuBtnBlackActive,
+  LogoIconBlack,
 } from "../../Icons";
 import avt from "../../../assets/avata/avt-user.jpg";
+import { useState, useEffect } from "react";
 
 const itemList = [
   {
@@ -33,7 +35,7 @@ const itemList = [
     icon: SearchIconBlack,
     iconActive: SearchIconBlackActive,
     title: "Tìm kiếm",
-    to: "#",
+    // to: "#",
   },
   {
     icon: ExploreIconBlack,
@@ -69,9 +71,32 @@ const itemList = [
 ];
 
 function Nav() {
+  const [isSmallMenu, setIsSmallMenu] = useState(null);
+
+  const resizeHandler = () => {
+    const width = window.innerWidth;
+    setIsSmallMenu(width < 1200 ? true : false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("reload", resizeHandler);
+    return () => window.removeEventListener("reload", resizeHandler);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    return () => window.removeEventListener("resize", resizeHandler);
+  }, []);
+
   return (
     <div className="nav-wrapper">
-      <img className="logo" src={logo} alt="logo" />
+      {isSmallMenu === true ? (
+        <div className="logo-icon">
+          <LogoIconBlack />
+        </div>
+      ) : (
+        <img className="logo" src={logo} alt="logo" />
+      )}
       <div className="nav-list">
         {itemList.map((item, index) => {
           const Icon = item.icon;

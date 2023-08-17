@@ -17,11 +17,20 @@ $border-color: #dbdbdb;
     left: 0;
     bottom: 0;
     z-index: 10;
+    // transition: all ease-in-out .5s;
 
     .logo {
         padding: 14px 10px;
         margin-bottom: 10px;
         cursor: pointer;
+    }
+
+    .logo-icon {
+        width: 48px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-list {
@@ -171,3 +180,39 @@ $border-color: #dbdbdb;
         
     }    
 }
+
+@media (max-width: 1200px) {
+    .nav-wrapper {
+      width: 70px ;
+
+      .logo-icon {
+        cursor: pointer;
+      }
+
+      .nav-item {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+
+        &:last-child .nav-icon {
+            padding: 0 !important;
+
+            img {
+                padding: 8px;
+            }
+        }
+
+        span {
+            width: 0;
+            height: 0;
+        }
+
+      }
+
+      .btn-menu  {
+        .title {
+            display: none !important;
+        }
+      }
+    }
+  }

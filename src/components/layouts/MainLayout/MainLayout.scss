@@ -1,0 +1,18 @@
+$navNormalWidth : 245px;
+$navSmallWidth : 70px;
+
+.content-page {
+    width: calc(100%- $navNormalWidth);
+    margin-left: $navNormalWidth;
+    min-height: 100vh;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .content-page {
+        width: calc(100%- $navSmallWidth);
+        margin-left: $navSmallWidth;
+    }
+}

@@ -1,5 +1,4 @@
 import "./Reels.scss";
-import Nav from "../../layouts/Nav";
 import ReelItem from "../../ReelItem/ReelItem";
 import avt from "../../../assets/avata/avt-user.jpg";
 import r2 from "../../../assets/reelsPage/reel-1.mp4";
@@ -263,21 +262,17 @@ const reels = [
 
 function Reels() {
   const reelList = reels;
+
   return (
-    <div className="reels-wrapper">
-      <div className="main-menu">
-        <Nav />
-      </div>
-      <div className="content-wrapper">
-        <div className="reel-list">
-          {reelList.map((reel) => {
-            return (
-              <div key={reel.id} className="reel-item">
-                <ReelItem reel={reel} />
-              </div>
-            );
-          })}
-        </div>
+    <div className="content-wrapper">
+      <div className="reel-list">
+        {reelList.map((reel) => {
+          return (
+            <div key={reel.id} className="reel-item">
+              <ReelItem reel={reel} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,0 +1,111 @@
+{
+    "id": 1,
+    "avt": "../../../assets/avata/avt-user.jpg",
+    "username": "adam_gfb",
+    "fullname": "Vi Văn Đảm",
+    "email": "vidam21042001@gmail.com",
+    "phone": "0385847578",
+    "follower": 20,
+    "following": 200,
+    "saveList" : [
+        {"name": "Tất cả bài viết","list": [1,2,3,4]},
+         {"name": "english", "list": [1,3]},
+         {"name": "girl", "list": [1,2,3]}
+    ],
+    "tagedList" : [2,4,1,3],
+    "post": [
+            {
+                "id": 1,
+                "avt": "../../../assets/avata/avt-user.jpg",
+                "extraInfo": "Mới tham gia Instagram",
+                "username": "adam_gfb",
+                "fullName": "Vi Văn Đảm",
+                "time": "2 ngày",
+                "likes": 6,
+                "sound": "Âm thanh gốc",
+                "location": "Đà Nẵng",
+                "caption": "𝒞𝑜𝓂𝑒 𝒽𝑜𝓂𝑒 𝒷𝒶𝑒 🥱",
+                "blueTick": true,
+                "comments": [
+                { "username": "abcxyz123", "comment": "xinh quá xinh quá" },
+                { "username": "xyzabc321", "comment": "ôi đẹp quá đi! ôi đẹp quá đi!" }
+                ],
+                "images": [{"src":"../../../assets/explorePage/ex-p-2.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-3.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-4.jpg", "type":"image"}]
+            },
+            {
+                "id": 2,
+                "avt": "../../../assets/avata/avt-user.jpg",
+                "extraInfo": "Mới tham gia Instagram",
+                "username": "adam_gfb",
+                "fullName": "Vi Văn Đảm",
+                "time": "2 ngày",
+                "likes": 100,
+                "sound": "Âm thanh gốc",
+                "location": "Đà Nẵng",
+                "caption": "𝒞𝑜𝓂𝑒 𝒽𝑜𝓂𝑒 𝒷𝒶𝑒 🥱",
+                "blueTick": true,
+                "comments": [
+                { "username": "abcxyz123", "comment": "xinh quá xinh quá" },
+                { "username": "xyzabc321", "comment": "ôi đẹp quá đi! ôi đẹp quá đi!" }
+                ],
+                "images": [{"src":"../../../assets/explorePage/ex-p-2.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-3.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-4.jpg", "type":"image"}]
+            },
+            {
+                "id": 3,
+                "avt": "../../../assets/avata/avt-user.jpg",
+                "extraInfo": "Mới tham gia Instagram",
+                "username": "adam_gfb",
+                "fullName": "Vi Văn Đảm",
+                "time": "2 ngày",
+                "likes": 3300,
+                "sound": "Âm thanh gốc",
+                "location": "Đà Nẵng",
+                "caption": "𝒞𝑜𝓂𝑒 𝒽𝑜𝓂𝑒 𝒷𝒶𝑒 🥱",
+                "blueTick": true,
+                "comments": [
+                { "username": "abcxyz123", "comment": "xinh quá xinh quá" },
+                { "username": "xyzabc321", "comment": "ôi đẹp quá đi! ôi đẹp quá đi!" }
+                ],
+                "images": [{"src":"../../../assets/explorePage/ex-p-2.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-3.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-4.jpg", "type":"image"}]
+            },
+            {
+                "id": 4,
+                "avt": "../../../assets/avata/avt-user.jpg",
+                "extraInfo": "Mới tham gia Instagram",
+                "username": "adam_gfb",
+                "fullName": "Vi Văn Đảm",
+                "time": "2 ngày",
+                "likes": 987,
+                "sound": "Âm thanh gốc",
+                "location": "Đà Nẵng",
+                "caption": "𝒞𝑜𝓂𝑒 𝒽𝑜𝓂𝑒 𝒷𝒶𝑒 🥱",
+                "blueTick": true,
+                "comments": [
+                { "username": "abcxyz123", "comment": "xinh quá xinh quá" },
+                { "username": "xyzabc321", "comment": "ôi đẹp quá đi! ôi đẹp quá đi!" }
+                ],
+                "images": [{"src":"../../../assets/explorePage/ex-p-2.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-3.jpg", "type":"image"},
+                {"src":"../../../assets/explorePage/ex-p-4.jpg", "type":"image"}]
+            }
+    ],
+    "caption": "Có cái deadline mãi chưa chạy xong!",
+    "collections": [
+        {"name":"me","img":"../../../assets/explorePage/ex-p-3.jpg", "storyList": [1,2,3,4]},
+        {"name":"game","img":"../../../assets/explorePage/ex-p-2.jpg", "storyList": [1,2,3,4]},
+        {"name":"sad","img":"../../../assets/explorePage/ex-p-1.jpg", "storyList": [1,2,3,4]}
+    ],
+    "stories": [
+        {"id":1, "img":"../../../assets/explorePage/ex-p-3.jpg", "content": "../../../assets/explorePage/ex-r-1.jpg", "type": "video"},
+        {"id":2, "img":"../../../assets/explorePage/ex-p-3.jpg", "content": "../../../assets/explorePage/ex-r-2.jpg", "type": "video"},
+        {"id":3, "img":"../../../assets/explorePage/ex-p-3.jpg", "content": "../../../assets/explorePage/ex-r-3.jpg", "type": "video"},
+        {"id":4, "img":"../../../assets/explorePage/ex-p-3.jpg", "content": "../../../assets/explorePage/ex-p-2.jpg", "type": "video"}
+    ]
+
+}

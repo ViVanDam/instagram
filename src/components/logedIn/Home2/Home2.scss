@@ -5,17 +5,6 @@ $sec-text-color: #737373;
 $footer-color: #c7c7c7;
 $blue-text-color: #0995f6;
 
-.home2-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    .main-menu {
-        min-width: 245px;
-        height: 100vh;
-    }
-
     .content-wrapper {
         flex: 1;
         display: flex;
@@ -135,4 +124,10 @@ $blue-text-color: #0995f6;
             }
         }
     }
+
+@media (max-width: 1180px) {
+    .right-content {
+        display: none;
+    }
+    
 }
