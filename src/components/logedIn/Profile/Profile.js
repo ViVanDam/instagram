@@ -40,7 +40,7 @@ function Profile() {
   }, [isActiveType]);
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper profile">
       <div className="info-basic">
         <div className="avt">
           <img src={profileData.avt} alt="avt" />

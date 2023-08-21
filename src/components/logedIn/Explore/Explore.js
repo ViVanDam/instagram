@@ -182,7 +182,7 @@ const galleryData = [
 
 function Explore() {
   const [gallery] = useState(galleryData);
-  const [showGallery, setShowGallery] = useState([gallery[0]]);
+  const [showGallery, setShowGallery] = useState([gallery[0], gallery[1]]);
   const [loading, setLoading] = useState(false);
 
   const handleScroll = () => {
@@ -213,7 +213,7 @@ function Explore() {
     return () => window.removeEventListener("scroll", handleScroll);
   });
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper explore">
       <div className="gallery">
         {showGallery.map((item, index) => {
           return <GalleryPage key={index} data={item} />;

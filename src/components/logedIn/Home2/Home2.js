@@ -276,7 +276,7 @@ function Home2() {
   };
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper home2">
       <div className="center-content">
         <HomeStoriesList storyList={stories} />
         <div className="post-list">

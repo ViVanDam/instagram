@@ -95,7 +95,9 @@ function Nav() {
           <LogoIconBlack />
         </div>
       ) : (
-        <img className="logo" src={logo} alt="logo" />
+        <div className="logo-icon-wrapper">
+          <img className="logo" src={logo} alt="logo" />
+        </div>
       )}
       <div className="nav-list">
         {itemList.map((item, index) => {

@@ -5,11 +5,9 @@ $sec-text-color: #737373;
 $footer-color: #c7c7c7;
 $blue-text-color: #0995f6;
 
-    .content-wrapper {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+    .content-wrapper.home2 {
         align-items: flex-start;
+        flex-direction: row;
         padding: 0 100px;
 
         .center-content {

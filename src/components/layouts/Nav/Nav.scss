@@ -26,11 +26,24 @@ $border-color: #dbdbdb;
     }
 
     .logo-icon {
-        width: 48px;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 10px 12px;
+
+        &:hover {
+            background-color: $hover-bgc;
+            border-radius: 8px;
+        }
+
+        &:hover .icon {
+            scale: 1.02;
+        }
+
+        .logo-icon-wrapper {
+            width: 48px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .nav-list {

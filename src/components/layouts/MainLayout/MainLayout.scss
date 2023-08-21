@@ -8,6 +8,12 @@ $navSmallWidth : 70px;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
+
+    .content-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1200px) {
