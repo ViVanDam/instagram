@@ -292,6 +292,7 @@ function Home2() {
             username={"adam_gfb"}
             fullname="Vi Văn Đảm"
             direction="horiz"
+            size="48"
           />
           <span className="switch-account">Chuyển</span>
         </div>

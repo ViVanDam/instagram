@@ -20,7 +20,7 @@ import { useEffect } from "react";
 function Profile() {
   const profileData = data;
   profileData.avt = avt;
-  profileData.post.map((item) => {
+  profileData.post.forEach((item) => {
     return item.images.map((item) => {
       return (item.src = postImg);
     });
@@ -158,8 +158,10 @@ function Profile() {
               {profileData.post.map((item, index) => {
                 return (
                   <div className="post-item" key={index}>
-                    {item.images.slice(0, 1).map((it) => {
-                      return <img src={it.src} alt="img-post-item" />;
+                    {item.images.slice(0, 1).map((it, index) => {
+                      return (
+                        <img src={it.src} alt="img-post-item" key={index} />
+                      );
                     })}
                     {item.images && item.images.length > 1 && (
                       <span className="icon-wrapper">

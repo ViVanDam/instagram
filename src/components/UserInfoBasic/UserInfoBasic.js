@@ -11,8 +11,10 @@ function UserInfoBasic({
   time = null,
   direction = "verti",
   size = "56",
+  ortherSize = null,
   sound = "",
   extraInfo = "",
+  extraFollow = "",
   post = false,
 }) {
   const flexDirection = direction === "verti" ? "column" : "row";
@@ -37,7 +39,7 @@ function UserInfoBasic({
         width: userInfoWidth,
         justifyContent: justifyContent,
         flex: 1,
-        height: userInHeight,
+        height: ortherSize && ortherSize !== null ? ortherSize : userInHeight,
       }}
     >
       <div
@@ -47,7 +49,10 @@ function UserInfoBasic({
         <img
           src={avt}
           alt="avt-img"
-          style={{ width: imgWidth, height: imgHeight }}
+          style={{
+            width: size === "48" ? "48px" : imgWidth,
+            height: size === "48" ? "48px" : imgHeight,
+          }}
         />
       </div>
       <div
@@ -86,9 +91,17 @@ function UserInfoBasic({
               </span>
             )}
           </div>
-          {fullname && fullname !== "" && (
-            <div className="fullname">{fullname}</div>
-          )}
+          <div className="full-extra-follower">
+            {fullname && fullname !== "" && (
+              <span className="fullname">{fullname}</span>
+            )}
+            {extraFollow && extraFollow !== "" && (
+              <>
+                <span className="bullet"> &bull; </span>
+                <span className="extra-info"> {extraFollow}</span>
+              </>
+            )}
+          </div>
         </div>
 
         <div className="extra-info-wrapper">

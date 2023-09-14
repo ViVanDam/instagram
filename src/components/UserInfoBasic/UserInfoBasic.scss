@@ -43,6 +43,23 @@
             justify-content: center;
             // align-items: center;
             flex-direction: column;
+
+            .full-extra-follower {
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+
+                .bullet {
+                    padding: 0 5px;
+                }
+
+                .extra-info {
+                    flex: 1;
+                    height: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
         }
         
         .username-and-time {
@@ -56,6 +73,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            
 
             .username {
                 color: #000;
